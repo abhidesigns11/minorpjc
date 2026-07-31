@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Aptos+Narrow:ital,wght@0,400;0,700;1,400&display=swap');
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Aptos Narrow', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px 0;
+    color: #15355f;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+/* Screen Action Bar */
+.action-bar {
+    width: 210mm;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-print-now {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-back {
+    background-color: #6c757d;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Exact A4 Sheet Container */
+.invoice-paper {
+    background: #ffffff;
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    padding: 10mm 12mm;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    color: #15355f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header Area */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 6px;
+    padding-top: 2px;
+}
+
+.header-logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.company-logo {
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #cca14c;
+}
+
+.header-title {
+    font-family: 'Sitka Small Semibold', Georgia, serif;
+    font-size: 23pt;
+    font-weight: bold;
+    color: #15355f;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+.copy-type-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid #cca14c;
+    padding: 3px 6px;
+    font-size: 8px;
+    line-height: 1.4;
+    color: #15355f;
+    background: #ffffff;
+}
+
+.copy-type-box div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.copy-type-box input {
+    margin: 0;
+    width: 9px;
+    height: 9px;
+}
+
+.header-address {
+    font-family: 'Book Antiqua', Palatino, serif;
+    text-align: center;
+    font-size: 9.5pt;
+    color: #15355f;
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+
+/* Base Style for Distinct Block Tables with Full Vertical & Horizontal Grid Borders */
+table.section-block {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid #cca14c;
+    margin-bottom: 8px;
+}
+
+table.section-block td, 
+table.section-block th {
+    border: 1px solid #cca14c; /* Outer and internal vertical/horizontal lines */
+    padding: 3.5px 6px;
+    font-size: 10.5px;
+    color: #15355f;
+}
+
+.bg-header-gold {
+    background-color: #dbbc7f;
+    font-weight: bold;
+    color: #15355f;
+}
+
+.text-bold { font-weight: bold; }
+.text-normal { font-weight: normal; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Product Table Section */
+.product-wrapper {
+    flex: 1;
+    display: flex;
+    margin-bottom: 8px;
+}
+
+table.product-block {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid #cca14c;
+}
+
+table.product-block th {
+    border: 1px solid #cca14c;
+    background-color: #dbbc7f;
+    padding: 5px 6px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #15355f;
+}
+
+table.product-block td {
+    border-left: 1px solid #cca14c;
+    border-right: 1px solid #cca14c;
+    border-bottom: none;
+    border-top: none;
+    padding: 5px 6px;
+    font-size: 10.5px;
+    color: #15355f;
+    vertical-align: top;
+}
+
+table.product-block tr.stretch-row td {
+    height: 100%;
+}
+
+.item-subtitle {
+    font-size: 9.5px;
+    color: #15355f;
+    margin-top: 2px;
+    white-space: pre-line;
+    font-weight: normal;
+}
+
+/* Bottom Footer Table Block */
+table.footer-block {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1.5px solid #cca14c;
+    margin-top: 8px;
+}
+
+table.footer-block td {
+    border: 1px solid #cca14c;
+    padding: 5px 6px;
+    font-size: 9px;
+    color: #15355f;
+    vertical-align: bottom;
+}
+
+.terms-text {
+    line-height: 1.35;
+}
+
+@media print {
+    body { background-color: #ffffff; padding: 0; margin: 0; }
+    .action-bar { display: none; }
+    .invoice-paper { box-shadow: none; border: none; width: 210mm; height: 297mm; padding: 10mm 12mm; margin: 0; }
+}

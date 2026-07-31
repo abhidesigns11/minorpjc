@@ -1,0 +1,104 @@
+/* EXACT IMAGE REPLICA STYLES */
+@font-face {
+    font-family: 'InvoiceSerif';
+    src: local('Times New Roman');
+}
+
+body {
+    background: #525659;
+    font-family: 'InvoiceSerif', serif;
+    padding: 40px;
+}
+
+.page-a4 {
+    background: #FFF;
+    width: 850px; /* Wider for accuracy */
+    padding: 40px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    position: relative;
+    color: #1a3a5f; /* Navy Blue Font from Image */
+}
+
+/* THE EXACT GOLD COLOR FROM IMAGE */
+:root {
+    --invoice-gold: #cb9d06; 
+    --invoice-navy: #1a3a5f;
+    --invoice-gray: #f2f2f2;
+}
+
+.company-name {
+    font-size: 38px;
+    font-weight: bold;
+    color: var(--invoice-navy);
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.address-line {
+    text-align: center;
+    font-size: 13px;
+    border-bottom: 2px solid var(--invoice-gold); /* Gold Line from image */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.tax-invoice-table {
+    width: 100%;
+    border: 1.5px solid #000;
+    border-collapse: collapse;
+}
+
+.tax-invoice-table td, .tax-invoice-table th {
+    border: 1px solid #000;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+/* HEADER BOXES */
+.bg-gray { background: var(--invoice-gray); }
+.bg-gold-light { background: #fff9e6; }
+
+/* THE PRODUCT TABLE HEADER (GOLD) */
+.gold-header {
+    background: var(--invoice-gold) !important;
+    color: #FFF !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-row td {
+    border-bottom: none;
+    border-top: none;
+}
+
+/* BANK & FOOTER */
+.grand-total-row {
+    background: var(--invoice-gray);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.signature-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.stamp-circle {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 12px;
+}
+
+.authorised-sign {
+    text-align: center;
+    font-weight: bold;
+}

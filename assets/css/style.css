@@ -1,0 +1,26 @@
+.image-upload-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.upload-circle {
+    width: 100px;
+    height: 100px;
+    background: #EFF6FF;
+    border: 2px dashed #2563EB;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: #2563EB;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px;
+    line-height: 1.2;
+}
+
+#file-input {
+    display: none;
+}
